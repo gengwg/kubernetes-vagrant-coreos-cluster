@@ -219,6 +219,16 @@ For a more elaborate scenario [here]
 you need to get a scalable Elasticsearch cluster on top of Kubernetes in no
 time.
 
+Check cluster is ready:
+
+```bash
+$ kubectl -s http://172.17.8.101:8080  get cs
+NAME                 STATUS    MESSAGE             ERROR
+scheduler            Healthy   ok
+controller-manager   Healthy   ok
+etcd-0               Healthy   {"health":"true"}
+```
+
 ## Troubleshooting
 
 #### Vagrant displays a warning message when running!
